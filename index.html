@@ -211,7 +211,7 @@
     <h2>Darknessapl - 唯一成员</h2>
     <p>开发者 GitHub 主页：</p>
     <ul>
-        <li><a href="https://github.com/Darkness-apl" target="_blank" rel="noopener noreferrer">GitHub 名片</a></li>
+        <li><a href="https://bgithub.xyz/Darkness-apl" target="_blank" rel="noopener noreferrer">GitHub 名片</a></li>
     </ul>
     <p>哔哩哔哩 主页：</p>
     <ul>
@@ -226,7 +226,7 @@
     </ul>
   </section>
 
-  <section id="favoriteSection" class="favorite-websites">
+  <section class="team-members" section id="favoriteSection" class="favorite-websites">
     <h2>游戏收藏夹</h2>
     <div id="websiteList">
         <div class="website-item">
@@ -240,59 +240,5 @@
     </div>
   </section>
 </main>
-
-<div class="particle-container"></div>
-
-<script>
-    function createParticle() {
-        let particle = document.createElement('div');
-        particle.className = 'particle';
-        particle.style.left = Math.random() * 100 + 'vw';
-        particle.style.top = Math.random() * 100 + 'vh';
-        particle.style.animationDelay = Math.random() * 5 + 's';
-        return particle;
-    }
-
-    function updateTime() {
-        var timeLabel = document.getElementById("timeLabel");
-        var greetingLabel = document.getElementById("greetingLabel");
-        var now = new Date();
-        var hours = now.getHours();
-        var minutes = now.getMinutes();
-        var seconds = now.getSeconds();
-
-        var timeString = `北京时间: ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
-
-        timeLabel.textContent = timeString;
-
-        if (hours >= 0 && hours < 5) {
-            greetingLabel.textContent = "凌晨好？";
-        } else if (hours < 12) {
-            greetingLabel.textContent = "上午好！";
-        } else if (hours < 14) {
-            greetingLabel.textContent = "中午好！";
-        } else if (hours < 18) {
-            greetingLabel.textContent = "下午好！";
-        } else {
-            greetingLabel.textContent = "晚上好！";
-        }
-    }
-
-    function formatTime(time) {
-        return time < 10 ? "0" + time : time;
-    }
-
-    window.onload = function() {
-        updateTime();
-        setInterval(updateTime, 1000);
-        document.getElementById("greetingLabel").style.opacity = 1;
-        document.getElementById("timeLabel").style.opacity = 1;
-
-        let particleContainer = document.querySelector('.particle-container');
-        for (let i = 0; i < 100; i++) {
-            particleContainer.appendChild(createParticle());
-        }
-    };
-</script>
 </body>
 </html>
