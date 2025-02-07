@@ -17,6 +17,15 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            position: relative; /* 添加定位属性以便子元素绝对定位 */
+        }
+        .back-button {
+            position: absolute; /* 绝对定位 */
+            top: 10px; /* 距离顶部10px */
+            left: 20px; /* 距离左侧20px */
+            color: #fff;
+            text-decoration: none; /* 去掉下划线 */
+            font-size: 16px; /* 设置字体大小 */
         }
         .container {
             width: 80%;
@@ -38,6 +47,7 @@
 </head>
 <body>
     <header>
+        <a href="#" class="back-button" onclick="history.back(); return false;">返回上一页</a>
         <h1>迷途</h1>
     </header>
     <div class="container">
